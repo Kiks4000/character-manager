@@ -182,7 +182,8 @@ header .navbar .nav-menu .nav-item .nav-link:hover::after {
 body {
   background-color: rgb(68, 68, 68);
 }
-body main {
+
+main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -195,6 +196,209 @@ body main {
   padding: 8rem;
   margin-top: 5.9rem;
   background-color: rgb(68, 68, 68);
+}
+main .title {
+  background-color: rgba(255, 255, 255, 0.75);
+  margin: 0 auto;
+  text-align: center;
+  width: 45rem;
+  min-width: 45rem;
+  border-radius: 0.5rem;
+  border: solid 0.2rem;
+  padding: 1.5rem;
+  -webkit-box-shadow: gray 0.3rem 0.3rem 0.3rem;
+          box-shadow: gray 0.3rem 0.3rem 0.3rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+main .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3rem;
+  gap: 4.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+main .container .card__tech {
+  background-color: rgba(255, 255, 255, 0.75);
+  width: 60rem;
+  min-width: 46.5rem;
+  height: 30rem;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0.8rem;
+  border: solid 0.2rem black;
+  padding: 1.5rem;
+  -webkit-box-shadow: gray 0.3rem 0.3rem 0.3rem;
+          box-shadow: gray 0.3rem 0.3rem 0.3rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+main .container .card__tech:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+main .container .card__tech .technology {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  font-weight: bold;
+}
+main .container .card__tech .technology .technology__github {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+main .container .card__tech .technology .technology__github .technology__github--link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+main .container .card__tech .technology .technology__title {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+main .container .card__tech .technology .list__gif {
+  width: 12rem;
+  border-radius: 5rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+main .container .card__tech .technology .list__gif:hover {
+  -webkit-box-shadow: 1px 1px #1b2329, 2px 2px #1b2329, 3px 3px #1b2329;
+          box-shadow: 1px 1px #1b2329, 2px 2px #1b2329, 3px 3px #1b2329;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+}
+main .container .card__tech a {
+  color: black;
+  margin: 2rem;
+}
+main .container .card__tech a:hover {
+  color: rgb(107, 98, 98);
+}
+main .container .card__tech .technology__list {
+  margin: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.9rem;
+  text-align: center;
+}
+main .container .card__tech .web__app {
+  width: 8rem;
+  border-radius: 5rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+main .container .card__tech .web__app:hover {
+  -webkit-box-shadow: 1px 1px #1b2329, 2px 2px #1b2329, 3px 3px #1b2329;
+          box-shadow: 1px 1px #1b2329, 2px 2px #1b2329, 3px 3px #1b2329;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+}
+main .tech__comment {
+  text-align: center;
+  margin: 2rem;
+}
+main .tech__comment .txt__comment {
+  margin-top: rem;
+  text-align: justify;
+  font-weight: normal;
+}
+main .tech__comment .title__comments {
+  margin-bottom: 1rem;
+}
+
+.creators__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 4.5rem;
+}
+.creators__container .creators {
+  border-radius: 8rem;
+  width: 10rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.creators__container .creators:hover {
+  -webkit-box-shadow: 1px 1px #1b2329, 2px 2px #1b2329, 3px 3px #1b2329;
+          box-shadow: 1px 1px #1b2329, 2px 2px #1b2329, 3px 3px #1b2329;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+}
+.creators__container .miguel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.kevin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+em {
+  font-weight: normal;
 }
 
 .rendered-form {
