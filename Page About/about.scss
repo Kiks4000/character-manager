@@ -5,7 +5,7 @@
 
 
 header{
-    background-color: black;
+    background-color: $black;
     .navbar{
         width: 100%;
         display: flex;
@@ -24,11 +24,11 @@ header{
                 a:link,
                 a:visited{
                     @media screen and(max-width:888px) {
-                        color: white;
+                        color: $white;
                         font-size: 24px;
                     }
-                    color: white;
-                    font-family: Arial, Helvetica, sans-serif;
+                    color: $white;
+                    font-family: $family;
                     font-size: 18px;
                     font-weight: 400;
                     letter-spacing: 2px;
@@ -39,12 +39,12 @@ header{
                     position: relative;
                     &::after{
                         @media screen and(max-width:888px) {
-                            background-color: white;
+                            background-color: $white;
                         }
                         position: absolute;
                         width: 100%;
                         height: 1px;
-                        background-color: white;
+                        background-color: $white;
                         bottom: -1px;
                         left: 0;
                         transform: scaleX(0);
@@ -72,7 +72,7 @@ header{
         margin: 0.4rem auto;
         -webkit-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
-        background: white;
+        background: $white;
     }
     @media screen and (max-width:888px) {
         display: block;
@@ -108,7 +108,7 @@ header{
 .nav-menu.active::after{
     @media screen and(max-width:888px) {
         content: "";
-        background-color: rgba(51,49,54,.4549019608);
+        background-color: $hamburger;
         height: 100vh;
         top: 0;
         left: 0;
@@ -126,7 +126,7 @@ header{
         top: 200px;
         gap: 0;
         flex-direction: column;
-        background: black;
+        background: $black;
         width: 100%;
         transition: 0.3s;
         min-height: 23.5rem;
@@ -135,7 +135,7 @@ header{
 }
 
 body{
-    background-color: rgb(68, 68, 68);
+    background-color: $bodyBG;
 } 
 
 main{
@@ -145,9 +145,9 @@ main{
         gap: 4.2rem;
         padding: 8rem;
         margin-top: 5.9rem;
-        background-color: rgb(68, 68, 68);
+        background-color: $bodyBG;
         .title{
-            background-color: rgba($color: #fff, $alpha: 0.75);
+            background-color: $cardbg;
             margin: 0 auto;
             margin-top: -5.9rem;
             text-align: center;
@@ -157,8 +157,8 @@ main{
             border: solid 0.2rem;
             padding: 1.5rem;
 
-            box-shadow: gray 0.3rem 0.3rem 0.3rem;
-            font-family: Arial, Helvetica, sans-serif;
+            box-shadow: $shadowBox;
+            font-family: $family;
         }
         .container{
             display: flex;
@@ -166,7 +166,7 @@ main{
             justify-content: center;
             padding: 3rem;
             gap: 4.5rem;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: $family;
         
         .card__tech{
             width: 60rem;
@@ -176,13 +176,14 @@ main{
             display: flex;
             justify-content: center;
             border-radius: 0.8rem;
-            border: solid 0.2rem black;
+            border: solid 0.2rem $black;
             padding: 1.5rem;
-            box-shadow: gray 0.4rem 0.4rem 0.4rem;
-            background-color: rgba($color: #fff, $alpha: 0.75);
+            box-shadow: $shadowBox;
+            background-color: $cardbg;
             transition: all 0.3s ease-in-out;
             &:hover{
                 transform: scale(0.99);
+                box-shadow: $bigShadowBox;
             }
         
             .technology{
@@ -199,10 +200,8 @@ main{
                 margin-bottom:3rem;
                 margin-top: 3rem;
                 .technology__github--link{
-                    display: flex;
+                    @include displayFlexCenter;
                     flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
                 }
                 } 
                 .technology__title{
@@ -225,7 +224,7 @@ main{
                 
             }
             a{
-                color:black;
+                color: $black;
                 margin: 2rem;
                 &:hover{
                 color:rgb(107, 98, 98);         
@@ -295,19 +294,13 @@ main{
             }      
     }
     .miguel{
-        display: flex;
+        @include displayFlexCenter;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    
     }
 }
 .kevin{
-    display:flex;
+    @include displayFlexCenter;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
 }
 em{
     font-weight: normal;
@@ -317,7 +310,7 @@ em{
 // ----------- Form -----------
 
 .rendered-form{
-    border: 1px solid black;
+    border: 1px solid $black;
     border-radius: 0.8rem;
     margin-top: -5.9rem;
     padding: 2rem;
@@ -325,13 +318,13 @@ em{
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    box-shadow: gray 0.4rem 0.4rem 0.4rem;
-    background-color: rgba($color: #fff, $alpha: 0.75);
+    box-shadow: $shadowBox;
+    background-color: $cardbg;
     .field-formName{
         display: flex;
         flex-direction: column;
         .formName{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: $family;
             font-size: 1.6rem;
             font-weight: 600;
         }
@@ -340,7 +333,7 @@ em{
         display: flex;
         flex-direction: column;
         .formShortDescription{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: $family;
             font-size: 1.6rem;
             font-weight: 600;
         }
@@ -349,7 +342,7 @@ em{
         display: flex;
         flex-direction: column;
         .formDescription{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: $family;
             font-size: 1.6rem;
             font-weight: 600;
         }
@@ -358,20 +351,20 @@ em{
         display: flex;
         flex-direction: column;
         .formPicture{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: $family;
             font-size: 1.6rem;
             font-weight: 600;
         }
     }
     .field-formBtn{
         #formBtn{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: $family;
             font-size: 1.2rem;
-            color: black;
+            color: $black;
             text-decoration: none;
             width: 8rem;
             height: 4rem;
-            border: 2px solid black;
+            border: 2px solid $black;
             border-radius: 0.8rem;
             transition: all 0.3s ease-in-out;
             cursor: pointer;

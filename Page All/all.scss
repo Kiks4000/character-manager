@@ -4,7 +4,7 @@
 @import '../assets/utils/mixins';
 
 header{
-    background-color: black;
+    background-color: $black;
     .navbar{
         width: 100%;
         display: flex;
@@ -27,7 +27,7 @@ header{
                         font-size: 24px;
                     }
                     color: white;
-                    font-family: Arial, Helvetica, sans-serif;
+                    font-family: $family;
                     font-size: 18px;
                     font-weight: 400;
                     letter-spacing: 2px;
@@ -38,12 +38,12 @@ header{
                     position: relative;
                     &::after{
                         @media screen and(max-width:888px) {
-                            background-color: white;
+                            background-color: $white;
                         }
                         position: absolute;
                         width: 100%;
                         height: 1px;
-                        background-color: white;
+                        background-color: $white;
                         bottom: -1px;
                         left: 0;
                         transform: scaleX(0);
@@ -71,7 +71,7 @@ header{
         margin: 0.4rem auto;
         -webkit-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
-        background: white;
+        background: $white;
     }
     @media screen and (max-width:888px) {
         display: block;
@@ -107,7 +107,7 @@ header{
 .nav-menu.active::after{
     @media screen and(max-width:888px) {
         content: "";
-        background-color: rgba(51,49,54,.4549019608);
+        background-color: $hamburger;
         height: 100vh;
         top: 0;
         left: 0;
@@ -125,7 +125,7 @@ header{
         top: 200px;
         gap: 0;
         flex-direction: column;
-        background: black;
+        background: $black;
         width: 100%;
         transition: 0.3s;
         min-height: 23.5rem;
@@ -134,7 +134,7 @@ header{
 }
 
 body{
-    background-color: rgb(68, 68, 68);
+    background-color: $bodyBG;
     main{
         display: flex;
         flex-wrap: wrap;
@@ -142,7 +142,7 @@ body{
         gap: 4.2rem;
         padding: 8rem;
         margin-top: 5.9rem;
-        background-color: rgb(68, 68, 68);
+        background-color: $bodyBG;
         .card{
             width: 30rem;
             height: 45rem;
@@ -154,10 +154,10 @@ body{
             align-items: center;
             padding: 3rem;
             gap: 2rem;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: $family;
     
-            box-shadow: gray 0.4rem 0.4rem 0.4rem;
-            background-color: rgba($color: #fff, $alpha: 0.75);
+            box-shadow: $shadowBox;
+            background-color: $cardbg;
     
             margin-bottom: 5rem;
             transition: all 0.3s ease-in-out;
@@ -165,7 +165,7 @@ body{
                 transform: scale(0.99);
             }
             .name{
-                font-family: Arial, Helvetica, sans-serif;
+                font-family: $family;
                 font-size: 2rem;
             }
             .imgBase64{
@@ -175,14 +175,14 @@ body{
                 border: 2px solid black;
             }
             .shortDescription{
-                font-family: Arial, Helvetica, sans-serif;
+                font-family: $family;
                 font-size: 1.3rem;
                 overflow-y: auto;
                 min-height: 1.8rem;
     
             }
             .longDescription{
-                font-family: Arial, Helvetica, sans-serif;
+                font-family: $family;
                 font-size: 1.2rem;
                 text-align: justify;
                 overflow-y: auto;
@@ -194,13 +194,13 @@ body{
                 display: flex;
                 gap: 1rem;
                 .modify{
-                    font-family: Arial, Helvetica, sans-serif;
+                    font-family: $family;
                     font-size: 1.2rem;
-                    color: black;
+                    color: $black;
                     text-decoration: none;
                     width: 8rem;
                     height: 4rem;
-                    border: 2px solid black;
+                    border: 2px solid $black;
                     border-radius: 0.8rem;
                     transition: all 0.3s ease-in-out;
                     cursor: pointer;
@@ -210,13 +210,13 @@ body{
                     }
                 }
                 .delete{
-                    font-family: Arial, Helvetica, sans-serif;
+                    font-family: $family;
                     font-size: 1.2rem;
-                    color: black;
+                    color: $black;
                     text-decoration: none;
                     width: 8rem;
                     height: 4rem;
-                    border: 2px solid black;
+                    border: 2px solid $black;
                     border-radius: 0.8rem;
                     transition: all 0.3s ease-in-out;
                     cursor: pointer;
@@ -233,7 +233,7 @@ body{
 // ----------- Form -----------
 
 .rendered-form{
-    border: 1px solid black;
+    border: 1px solid $black;
     border-radius: 0.8rem;
     margin-top: -5.9rem;
     padding: 2rem;
@@ -241,13 +241,13 @@ body{
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    box-shadow: gray 0.4rem 0.4rem 0.4rem;
-    background-color: rgba($color: #fff, $alpha: 0.75);
+    box-shadow: $shadowBox;
+    background-color: $cardbg;
     .field-formName{
         display: flex;
         flex-direction: column;
         .formName{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: $family;
             font-size: 1.6rem;
             font-weight: 600;
         }
@@ -256,7 +256,7 @@ body{
         display: flex;
         flex-direction: column;
         .formShortDescription{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: $family;
             font-size: 1.6rem;
             font-weight: 600;
         }
@@ -265,7 +265,7 @@ body{
         display: flex;
         flex-direction: column;
         .formDescription{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: $family;
             font-size: 1.6rem;
             font-weight: 600;
         }
@@ -274,20 +274,20 @@ body{
         display: flex;
         flex-direction: column;
         .formPicture{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: $family;
             font-size: 1.6rem;
             font-weight: 600;
         }
     }
     .field-formBtn{
         #formBtn{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: $family;
             font-size: 1.2rem;
-            color: black;
+            color: $black;
             text-decoration: none;
             width: 8rem;
             height: 4rem;
-            border: 2px solid black;
+            border: 2px solid $black;
             border-radius: 0.8rem;
             transition: all 0.3s ease-in-out;
             cursor: pointer;

@@ -19,7 +19,7 @@ a:link {
 }
 
 header {
-  background-color: black;
+  background-color: #000;
 }
 header .navbar {
   width: 100%;
@@ -75,7 +75,7 @@ header .navbar .nav-menu .nav-item .nav-link::after {
   position: absolute;
   width: 100%;
   height: 1px;
-  background-color: white;
+  background-color: #fff;
   bottom: -1px;
   left: 0;
   -webkit-transform: scaleX(0);
@@ -90,7 +90,7 @@ header .navbar .nav-menu .nav-item .nav-link::after {
 }
 @media screen and (max-width: 888px) {
   header .navbar .nav-menu .nav-item .nav-link::after {
-    background-color: white;
+    background-color: #fff;
   }
 }
 header .navbar .nav-menu .nav-item .nav-link:hover::after {
@@ -111,7 +111,7 @@ header .navbar .nav-menu .nav-item .nav-link:hover::after {
   margin: 0.4rem auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background: white;
+  background: #fff;
 }
 @media screen and (max-width: 888px) {
   .hamburger {
@@ -170,7 +170,7 @@ header .navbar .nav-menu .nav-item .nav-link:hover::after {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background: black;
+    background: #000;
     width: 100%;
     -webkit-transition: 0.3s;
     transition: 0.3s;
@@ -262,11 +262,11 @@ body main .card .btns {
 body main .card .btns .modify {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
-  color: black;
+  color: #000;
   text-decoration: none;
   width: 8rem;
   height: 4rem;
-  border: 2px solid black;
+  border: 2px solid #000;
   border-radius: 0.8rem;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -280,11 +280,11 @@ body main .card .btns .modify:hover {
 body main .card .btns .delete {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
-  color: black;
+  color: #000;
   text-decoration: none;
   width: 8rem;
   height: 4rem;
-  border: 2px solid black;
+  border: 2px solid #000;
   border-radius: 0.8rem;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -297,7 +297,7 @@ body main .card .btns .delete:hover {
 }
 
 .rendered-form {
-  border: 1px solid black;
+  border: 1px solid #000;
   border-radius: 0.8rem;
   margin-top: -5.9rem;
   padding: 2rem;
@@ -373,11 +373,11 @@ body main .card .btns .delete:hover {
 .rendered-form .field-formBtn #formBtn {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
-  color: black;
+  color: #000;
   text-decoration: none;
   width: 8rem;
   height: 4rem;
-  border: 2px solid black;
+  border: 2px solid #000;
   border-radius: 0.8rem;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;

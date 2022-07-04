@@ -4,7 +4,7 @@
 @import './assets/utils/mixins';
 
 header{
-    background-color: black;
+    background-color: $black;
     .navbar{
         width: 100%;
         display: flex;
@@ -23,11 +23,11 @@ header{
                 a:link,
                 a:visited{
                     @media screen and(max-width:888px) {
-                        color: white;
+                        color: $white;
                         font-size: 24px;
                     }
-                    color: white;
-                    font-family: Arial, Helvetica, sans-serif;
+                    color: $white;
+                    font-family: $family;
                     font-size: 18px;
                     font-weight: 400;
                     letter-spacing: 2px;
@@ -38,12 +38,12 @@ header{
                     position: relative;
                     &::after{
                         @media screen and(max-width:888px) {
-                            background-color: white;
+                            background-color: $white;
                         }
                         position: absolute;
                         width: 100%;
                         height: 1px;
-                        background-color: white;
+                        background-color: $white;
                         bottom: -1px;
                         left: 0;
                         transform: scaleX(0);
@@ -71,7 +71,7 @@ header{
         margin: 0.4rem auto;
         -webkit-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
-        background: white;
+        background: $white;
     }
     @media screen and (max-width:888px) {
         display: block;
@@ -142,13 +142,11 @@ body{
         overflow-y: scroll;
     }
     main{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include displayFlexCenter;
         gap: 4.2rem;
         padding: 8rem;
         margin-top: 5.9rem;
-        background-color: rgb(68, 68, 68);
+        background-color: $bodyBG;
         .highlightCharacter{
             width: 100rem;
             border: 1px solid black;
@@ -156,25 +154,24 @@ body{
             margin-top: -5.9rem;
             padding: 2rem;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include displayFlexCenter;
+
             flex-direction: column;
 
-            background-color: rgba($color: #fff, $alpha: 0.75);
-            box-shadow: gray 0.4rem 0.4rem 0.4rem;
+            background-color: $cardbg;
+            box-shadow: $shadowBox;
             transition: all 0.2s ease-in-out;
             @media screen and(max-width:888px) {
                 min-width: 35rem;
                 max-width: 60rem;
             }
             &:hover{
-                box-shadow: gray 0.6rem 0.6rem 0.6rem;
+                box-shadow: $bigShadowBox;
                 -webkit-transform: translateY(-3px);
                 transform: translateY(-3px);
             }
             .highlightTitle{
-                font-family: Arial, Helvetica, sans-serif;
+                font-family: $family;
                 margin-bottom: 2rem;
                 font-size: 2.4rem;
                 color: red;
@@ -195,21 +192,17 @@ body{
             }
             .highlightCard{
                 width: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include displayFlexCenter;
                 gap: 2rem;
                 @media screen and(max-width:888px) {
                     flex-direction: column;
                 }
                 .underContainer{
-                    display: flex;
+                    @include displayFlexCenter;
                     flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
                     gap: 2rem;
                     .highlightName{
-                        font-family: Arial, Helvetica, sans-serif;
+                        font-family: $family;
                     }
                     .highlightImage{
                         width: 150px;
@@ -226,14 +219,14 @@ body{
                         }
                     }
                     .highlightShortDescription{
-                        font-family: Arial, Helvetica, sans-serif;
+                        font-family: $family;
                         font-size: 1.2rem;
                         font-weight: 600;
                         overflow-y: auto;
                     }
                 }
                 .highlightDescription{
-                    font-family: Arial, Helvetica, sans-serif;
+                    font-family: $family;
                     text-align: justify;
                     font-size: 1.6rem;
                     max-height: 20rem;
@@ -254,13 +247,13 @@ body{
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    box-shadow: gray 0.4rem 0.4rem 0.4rem;
-    background-color: rgba($color: #fff, $alpha: 0.75);
+    box-shadow: $shadowBox;
+    background-color: $cardbg;
     .field-formName{
         display: flex;
         flex-direction: column;
         .formName{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: $family;
             font-size: 1.6rem;
             font-weight: 600;
         }
@@ -269,7 +262,7 @@ body{
         display: flex;
         flex-direction: column;
         .formShortDescription{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: $family;
             font-size: 1.6rem;
             font-weight: 600;
         }
@@ -278,7 +271,7 @@ body{
         display: flex;
         flex-direction: column;
         .formDescription{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: $family;
             font-size: 1.6rem;
             font-weight: 600;
         }
@@ -287,20 +280,20 @@ body{
         display: flex;
         flex-direction: column;
         .formPicture{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: $family;
             font-size: 1.6rem;
             font-weight: 600;
         }
     }
     .field-formBtn{
         #formBtn{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: $family;
             font-size: 1.2rem;
-            color: black;
+            color: $black;
             text-decoration: none;
             width: 8rem;
             height: 4rem;
-            border: 2px solid black;
+            border: 2px solid $black;
             border-radius: 0.8rem;
             transition: all 0.3s ease-in-out;
             cursor: pointer;
